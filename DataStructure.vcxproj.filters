@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>qml;cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>qrc;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts</Extensions>
+    </Filter>
+    <Filter Include="cliquecount">
+      <UniqueIdentifier>{ad601875-0322-4011-937f-ad5917cfe2db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lemmagen">
+      <UniqueIdentifier>{5f1eab48-1d18-4bdd-9b1a-89663aa1e72f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="back">
+      <UniqueIdentifier>{07b99419-787c-4ede-9e00-06cbaf5a2af8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="DataStructure.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtUic Include="DataStructure.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtMoc Include="DataStructure.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClCompile Include="DataStructure.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lemmagen\RdrLemmatizer.cpp">
+      <Filter>lemmagen</Filter>
+    </ClCompile>
+    <ClCompile Include="lemmagen\sl_lemmatizer.cpp">
+      <Filter>lemmagen</Filter>
+    </ClCompile>
+    <ClCompile Include="cliquecount\bignumber.cpp">
+      <Filter>cliquecount</Filter>
+    </ClCompile>
+    <ClCompile Include="cliquecount\degeneracy_algorithm_cliques_A.cpp">
+      <Filter>cliquecount</Filter>
+    </ClCompile>
+    <ClCompile Include="cliquecount\degeneracy_helper.cpp">
+      <Filter>cliquecount</Filter>
+    </ClCompile>
+    <ClCompile Include="cliquecount\LinkedList.cpp">
+      <Filter>cliquecount</Filter>
+    </ClCompile>
+    <ClCompile Include="cliquecount\misc.cpp">
+      <Filter>cliquecount</Filter>
+    </ClCompile>
+    <ClCompile Include="back\CountCompleteSubgraph.cpp">
+      <Filter>back</Filter>
+    </ClCompile>
+    <ClCompile Include="back\DataInit.cpp">
+      <Filter>back</Filter>
+    </ClCompile>
+    <ClCompile Include="back\FuzzSearch.cpp">
+      <Filter>back</Filter>
+    </ClCompile>
+    <ClCompile Include="back\KeywrodRank.cpp">
+      <Filter>back</Filter>
+    </ClCompile>
+    <ClCompile Include="back\utils.cpp">
+      <Filter>back</Filter>
+    </ClCompile>
+    <ClCompile Include="frontFunc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lemmagen\RdrLemmatizer.h">
+      <Filter>lemmagen</Filter>
+    </ClInclude>
+    <ClInclude Include="lemmagen\sl_lemmatizer.h">
+      <Filter>lemmagen</Filter>
+    </ClInclude>
+    <ClInclude Include="cliquecount\bignumber.h">
+      <Filter>cliquecount</Filter>
+    </ClInclude>
+    <ClInclude Include="cliquecount\degeneracy_algorithm_cliques_A.h">
+      <Filter>cliquecount</Filter>
+    </ClInclude>
+    <ClInclude Include="cliquecount\degeneracy_helper.h">
+      <Filter>cliquecount</Filter>
+    </ClInclude>
+    <ClInclude Include="cliquecount\LinkedList.h">
+      <Filter>cliquecount</Filter>
+    </ClInclude>
+    <ClInclude Include="cliquecount\misc.h">
+      <Filter>cliquecount</Filter>
+    </ClInclude>
+    <ClInclude Include="back\CountCompleteSubgraph.h">
+      <Filter>back</Filter>
+    </ClInclude>
+    <ClInclude Include="back\DataInit.h">
+      <Filter>back</Filter>
+    </ClInclude>
+    <ClInclude Include="back\FuzzSearch.h">
+      <Filter>back</Filter>
+    </ClInclude>
+    <ClInclude Include="back\KeywordRank.h">
+      <Filter>back</Filter>
+    </ClInclude>
+    <ClInclude Include="back\utils.h">
+      <Filter>back</Filter>
+    </ClInclude>
+    <ClInclude Include="frontFunc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="echarts.min.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="english.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="index.html">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

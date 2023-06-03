@@ -1,0 +1,119 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <!-- 引入 echarts.js -->
+    <script src="echarts.min.js"></script>
+    
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: 839px;height:454px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        let option = {
+            title: {
+                text: '作者关系图'
+            },
+            tooltip: {},
+            series:[
+                {
+                    "type": 'graph',
+                    layout: 'circular',
+                    circular: {
+                    rotateLabel: true
+                    },
+                    symbolSize: 50,
+                    roam: true,
+                    label:{
+                        show:true,
+                        position: 'right',
+                        formatter: '{b}'
+                    },
+                    edgeLabel:{
+                        psition:'middle',
+                        formatter:(params)=>{
+                                var str="";
+                                for(var i=0;i<params.data.relation.length;++i){
+                                    str+=params.data.relation[i];
+                                }
+                                return str;
+                            }
+                    },
+                    lineStyle: {
+                        color: 'source'
+                    }
+                                      
+                }
+            ]
+        };
+        // 使用刚指定的配置项和数据显示图表。
+        
+        myChart.setOption(option);
+        
+        myChart.on('click', function(params) {
+            if (params.dataType === 'edge') {
+                // 点击到了 graph 的 edge（边）上。
+                myChart.setOption({
+                    tooltip: {
+                        show: true,
+                            formatter:(params)=>{
+                            var str="";
+                            str+=params.data.relation[0];
+                            for(var i=1;i<params.data.relation.length;++i){
+                                str+="、"+params.data.relation[i];
+                            }
+                            return str;
+                        } // 将边的信息显示在 tooltip 中
+                    }
+                })
+            }
+            
+        });
+       
+        myChart.on('mouseover', function(params) {
+            if (params.dataType === 'edge') {
+                // 点击到了 graph 的 edge（边）上。
+                myChart.setOption({
+                    tooltip: {
+                        show: true,
+                            formatter:(params)=>{
+                            var str="";
+                            str+=params.data.relation[0];
+
+                            for(var i=1;i<params.data.relation.length;++i){
+                                str+="、"+params.data.relation[i];
+                            }
+                            return str;
+                        } // 将边的信息显示在 tooltip 中
+                    }
+                })
+            } 
+        });
+        function setName(inname){
+            myChart.setOption({
+                title:{
+                    text:inname+"的作者关系图"
+                }
+            });
+        }
+        function update(dataobj,linkobj){
+            myChart.showLoading();
+            myChart.setOption({
+                series:[
+                    {
+                       
+                        data:dataobj,
+                        links:linkobj
+                                      
+                    }]
+            });
+            myChart.hideLoading();
+            
+        }
+    </script>
+</body>
+</html>

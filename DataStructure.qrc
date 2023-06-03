@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/DataStructure"/>
+    <qresource prefix="/image">
+        <file>rce/clique.png</file>
+        <file>rce/init.png</file>
+        <file>rce/rank.png</file>
+        <file>rce/search.png</file>
+        <file>rce/icon.png</file>
+        <file>rce/seeing.png</file>
+        <file>rce/file.png</file>
+        <file>rce/help.png</file>
+        <file>rce/info.png</file>
+    </qresource>
+    <qresource prefix="/source">
+        <file>index.html</file>
+    </qresource>
+</RCC>
